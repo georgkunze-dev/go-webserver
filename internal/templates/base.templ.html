@@ -1,0 +1,27 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+{{ template "head" .}}
+<body>
+  <div class="wrapper">
+      {{ template "header" .}}
+      <main>
+        {{ .Content }}
+        <button onclick="topFunction()" id="myBtn" title="Go to top">➔</button>
+      </main>
+      {{ template "footer" . }} 
+  </div> <!-- .wrapper -->
+  
+  <!-- Load JS at the end to improve loading times -->
+  <script src="/static/js/nav.js"></script>
+  <script src="/static/js/back_to_top_button.js"></script>
+  {{ if .IsIndexPage }}
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+  <script src="/static/js/map.js"></script>
+  {{ end }}
+  {{ if .IsCDPage }}
+  <script src="/static/js/book.js"></script>
+  {{ end }}
+</body>
+</html>
+{{ end }}

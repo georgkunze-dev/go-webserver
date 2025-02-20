@@ -1,0 +1,53 @@
+
+/* Grid Raster */
+.grid-area {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+.überschrift-container {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+.grid-item1-2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+.grid-item1-3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid-item1-4 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.grid-item2-3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+.grid-item2-4 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+.grid-item3-4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+
+
+
+/* Mobile styles */
+@media(max-width: 1075px) {
+  .grid-item1-2,
+  .grid-item1-3,
+  .grid-item1-4,
+  .grid-item2-3,
+  .grid-item2-4,
+  .grid-item3-4 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
